@@ -1,6 +1,6 @@
-# GoQueen
+# GoQueensResolver
 
-GoQueen is a Go application that detects colored regions on a chessboard-like grid in an image and solves a variant of the N-Queens problem, placing one queen per color region such that no two queens threaten each other. The solution is visualized by overlaying queen emojis on the original image.
+GoQueensResolver is a Go application that detects colored regions on a chessboard-like grid in an image and solves a variant of the N-Queens problem, placing one queen per color region such that no two queens threaten each other. The solution is visualized by overlaying queen emojis on the original image.
 
 ## Features
 
