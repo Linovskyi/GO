@@ -14,7 +14,9 @@ import (
 )
 
 func main() {
-	imagePath := "C:\\photo.jpg"
+	homeDir, _ := os.UserHomeDir()
+	imagePath := filepath.Join(homeDir, "Desktop", "photo.jpg")
+
 	if len(os.Args) > 1 {
 		imagePath = os.Args[1]
 	}
@@ -69,7 +71,7 @@ func main() {
 	if err != nil {
 		fmt.Println("Draw error:", err)
 	} else {
-		fmt.Println("Файл збережено тут:", filepath.Join(".", "result_with_queens.png"))
+		fmt.Println("The file was saved to the project directory with the name :", filepath.Join(".", "result_queens.png"))
 	}
 }
 
@@ -263,7 +265,7 @@ func DrawQueens(imagePath string, solution [][]bool) error {
 			}
 		}
 	}
-	return dc.SavePNG("result_with_queens.png")
+	return dc.SavePNG("result_queens.png")
 }
 
 func min(a, b int) int {
